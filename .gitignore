@@ -1,3 +1,4 @@
 .vscode
-node_modules
+*.sqlite3
 **/static/frontend/
+node_modules/
