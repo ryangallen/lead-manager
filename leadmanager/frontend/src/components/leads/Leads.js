@@ -4,8 +4,10 @@ import PropTypes from 'prop-types';
 import { getLeads, deleteLead } from '../../actions/leads'
 
 export class Leads extends Component {
-    static PropTypes = {
-        leads: PropTypes.array.isRequired
+    static propTypes = {
+        leads: PropTypes.array.isRequired,
+        getLeads: PropTypes.func.isRequired,
+        deleteLead: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -15,7 +17,7 @@ export class Leads extends Component {
     render() {
         return (
             <Fragment>
-                <h1>Leads List</h1>
+                <h1 className="mt-4 mb-4">Leads</h1>
                 <table className="table table-striped">
                     <thead>
                         <tr>
